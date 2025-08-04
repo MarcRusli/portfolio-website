@@ -21,20 +21,64 @@ header {
   display: flex;
   justify-content: space-between;
   padding: 8px;
-  position: fixed;
 	background-color: var(--nav-background);
 	width: 100%;
-	height: 3.5em;
-	top: 0;
+	height: 4em;
 	align-items: center;
+	z-index: 1;
 }
 
 main {
-	margin-top: 3em;
-  padding: 0 1em;
 	border: 2px solid orange;
 }
 
 #home {
-	height: 100vh;
+	height: calc(100vh - 4em);
+}
+
+#home img {
+	width: 50%;
+	clip-path: circle();
+	margin: 0 auto;
+	display: block;
+	filter: grayscale(100%);
+}
+
+#home .top-panel {
+	height: 60%;
+	border: 2px solid green;
+}
+
+#home .bottom-panel {
+	height: 40%;
+	border: 2px solid red;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.hero {
+	font-size: 4.3rem;
+	line-height: 90%;
+	padding: 10px;
+	text-transform: uppercase;
+	border: 1px solid black;
+}
+
+#home .summary {
+	padding: 1em;
+	border: 1px solid black;
+}
+
+.divider {
+	height: 2em;
+	background: repeating-linear-gradient(
+		90deg,
+		red 0 1em,
+		orange 1em 2em,
+		yellow 2em 3em,
+		green 3em 4em,
+		blue 4em 5em,
+		purple 5em 6em
+	)
 }
