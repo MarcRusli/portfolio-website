@@ -7,8 +7,7 @@
 }
 
 :root {
-  --nav-background: white;
-
+  --nav-background: black;
 }
 
 html {
@@ -17,68 +16,100 @@ html {
 }
 
 header {
-  border-bottom: 2px solid blue;
+  border: 0.5em solid lightblue;
   display: flex;
   justify-content: space-between;
-  padding: 8px;
-	background-color: var(--nav-background);
-	width: 100%;
-	height: 4em;
-	align-items: center;
-	z-index: 1;
+  padding: 1em;
+  background-color: var(--nav-background);
+  width: 100%;
+  align-items: center;
+  color: white;
+	height: 5em;
+}
+
+header .links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1em;
+}
+
+i {
+  font-size: 1.5em !important;
+  color: white;
 }
 
 main {
-	border: 2px solid orange;
+  border: 0.5em solid orange;
 }
 
 #home {
-	height: calc(100vh - 4em);
-}
-
-#home img {
-	width: 50%;
-	clip-path: circle();
-	margin: 0 auto;
-	display: block;
-	filter: grayscale(100%);
+  height: calc(100vh - 5.5em);
 }
 
 #home .top-panel {
-	height: 60%;
-	border: 2px solid green;
+  background-image: url("/assets/profile-photo.jpg");
+  height: 80vh;
+  background-size: cover;
+  background-position: center;
+}
+
+#home img {
+  /* clip-path: circle(); */
+  margin: 0 auto;
+  display: block;
+  filter: grayscale(100%);
 }
 
 #home .bottom-panel {
-	height: 40%;
-	border: 2px solid red;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 0;
+  width: calc(100% - 1em);
+  background-color: black;
+  color: white;
 }
 
 .hero {
-	font-size: 4.3rem;
-	line-height: 90%;
-	padding: 10px;
-	text-transform: uppercase;
-	border: 1px solid black;
+  font-size: 15vw /* 4.2rem */;
+  line-height: 90%;
+  padding: 10px;
+  text-transform: uppercase;
+  border: 1px solid black;
 }
 
 #home .summary {
-	padding: 1em;
-	border: 1px solid black;
+  padding: 1em;
+  border: 1px solid black;
 }
 
 .divider {
-	height: 2em;
-	background: repeating-linear-gradient(
-		90deg,
-		red 0 1em,
-		orange 1em 2em,
-		yellow 2em 3em,
-		green 3em 4em,
-		blue 4em 5em,
-		purple 5em 6em
-	)
+  height: 2em;
+  background: repeating-linear-gradient(
+    90deg,
+    red 0 1em,
+    orange 1em 2em,
+    yellow 2em 3em,
+    green 3em 4em,
+    blue 4em 5em,
+    purple 5em 6em
+  );
+}
+
+#work {
+	background-color: #222222;
+	color: #eeeeee;
+}
+
+@media screen and (min-width: 992px) {
+  .hero {
+    font-size: 8.36vw;
+    text-align: center;
+  }
+
+  #home .summary {
+    text-align: center;
+  }
 }
