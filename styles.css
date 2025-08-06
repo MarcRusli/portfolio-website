@@ -24,7 +24,7 @@ header {
   width: 100%;
   align-items: center;
   color: white;
-	height: 5em;
+  height: 5em;
 }
 
 header .links {
@@ -59,6 +59,52 @@ main {
   margin: 0 auto;
   display: block;
   filter: grayscale(100%);
+}
+
+.cloud.top {
+	position: absolute;
+	top: 120px;
+	left: -400px;
+  height: 180px;
+  aspect-ratio: 1.8;
+  --g: radial-gradient(50% 50%, #000 98%, #0000) no-repeat;
+  mask: var(--g) 100% 100%/30% 60%, var(--g) 70% 0/50% 100%,
+    var(--g) 0 100%/36% 68%, var(--g) 27% 18%/26% 40%,
+    linear-gradient(#000 0 0) bottom/67% 58% no-repeat;
+  background: #ddddff;
+	animation: cloud-top 10s ease-in 0s infinite;
+}
+
+.cloud.bottom {
+	position: absolute;
+	top: 320px;
+	right: -400px;
+  height: 180px;
+  aspect-ratio: 1.8;
+  --g: radial-gradient(50% 50%, #000 98%, #0000) no-repeat;
+  mask: var(--g) 100% 100%/30% 60%, var(--g) 70% 0/50% 100%,
+    var(--g) 0 100%/36% 68%, var(--g) 27% 18%/26% 40%,
+    linear-gradient(#000 0 0) bottom/67% 58% no-repeat;
+  background: #ddddff;
+	animation: cloud-bottom 14s ease-in 4s infinite;
+}
+
+@keyframes cloud-top {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(calc(100vw + 400px));
+	}
+}
+
+@keyframes cloud-bottom {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(calc(-400px - 100vw));
+	}
 }
 
 #home .bottom-panel {
@@ -99,8 +145,8 @@ main {
 }
 
 #work {
-	background-color: #222222;
-	color: #eeeeee;
+  background-color: #222222;
+  color: #eeeeee;
 }
 
 @media screen and (min-width: 992px) {
