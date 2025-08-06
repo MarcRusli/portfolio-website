@@ -129,7 +129,7 @@ main {
   justify-content: space-between;
   position: absolute;
   bottom: 0;
-  width: calc(100% - 1em);
+  width: calc(100%);
   background-color: black;
   color: white;
 }
