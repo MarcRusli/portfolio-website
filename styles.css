@@ -58,7 +58,8 @@ main {
 }
 
 #home {
-  height: 100svh;
+  height: 100vh;
+  height: -webkit-fill-available;
   border: 3px solid pink;
 }
 
