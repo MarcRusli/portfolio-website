@@ -169,13 +169,14 @@ main {
 .hero {
   font-size: 14.59vw;
   line-height: 90%;
-  padding: var(--space-md);
+  padding: var(--space-md) var(--space-md) var(--space-xs);
   text-transform: uppercase;
+  border: 1px solid red;
 }
 
 #home .summary {
-  padding: 0 var(--space-md) var(--space-sm);
-  border: 1px solid black;
+  padding: 0 var(--space-md) var(--space-md);
+  border: 1px solid green;
 	color: #dddddd;
 }
 
