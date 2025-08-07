@@ -171,12 +171,10 @@ main {
   line-height: 90%;
   padding: var(--space-md) var(--space-md) var(--space-xs);
   text-transform: uppercase;
-  border: 1px solid red;
 }
 
 #home .summary {
   padding: 0 var(--space-md) var(--space-md);
-  border: 1px solid green;
 	color: #dddddd;
 }
 
