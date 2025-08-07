@@ -132,7 +132,7 @@ main {
 .cloud.bottom {
 	position: relative;
 	top: 140px;
-	right: -460px;
+	right: -100vw;
   height: 180px;
   aspect-ratio: 1.8;
   --g: radial-gradient(50% 50%, #000 98%, #0000) no-repeat;
