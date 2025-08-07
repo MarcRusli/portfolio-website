@@ -24,6 +24,12 @@ html {
   font-family: Arial, sans-serif;
 }
 
+body {
+	background: linear-gradient(
+    var(--nav-background) 0rem 5rem, 
+    hsl(300deg, 50%, 20%) 100vh);
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -62,11 +68,6 @@ main {
   filter: grayscale(100%);
 }
 
-#home .backdrop {
-	height: 100%;
-	background: linear-gradient(var(--nav-background), hsl(300deg, 50%, 20%));
-}
-
 .moon {
 	width: 10rem;
 	height: 10rem;
@@ -77,9 +78,46 @@ main {
 	right: 80px;
 }
 
+#cloud {
+	width: 350px; height: 120px;
+  background: #f2f9fe;
+  border-radius: 100px;
+  position: absolute;
+	z-index: 5;
+}
+
+#cloud:after, #cloud:before {
+  content: "";
+  position: absolute;
+  background: #f2f9fe;
+  z-index: -1;
+}
+
+#cloud:after {
+  width: 100px;
+  height: 100px;
+  top: -50px;
+  left: 50px;
+  border-radius: 100px;
+}
+
+#cloud:before {
+  width: 180px;
+  height: 180px;
+  top: -90px;
+  right: 50px;
+  border-radius: 200px;
+}
+
+.clouds {
+  width: 100%;
+  height: 70vh;
+	overflow: hidden;
+}
+
 .cloud.top {
-	position: absolute;
-	top: 120px;
+	position: relative;
+	top: 100px;
 	left: -340px;
   height: 150px;
   aspect-ratio: 1.8;
@@ -92,9 +130,9 @@ main {
 }
 
 .cloud.bottom {
-	position: absolute;
-	top: 320px;
-	right: -360px;
+	position: relative;
+	top: 140px;
+	right: -460px;
   height: 180px;
   aspect-ratio: 1.8;
   --g: radial-gradient(50% 50%, #000 98%, #0000) no-repeat;
