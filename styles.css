@@ -59,6 +59,7 @@ main {
 
 #home {
   height: 100vh;
+  height: 100dvh;
   border: 3px solid pink;
 }
 
@@ -199,14 +200,17 @@ section:not(#home) {
 #work {
   background-color: hsl(300deg, 50%, 20%);
   color: #eeeeee;
+  border: 2px solid red;
 }
 
 #other-pursuits {
 	background-color: hsl(300deg, 50%, 20%);
+  border: 2px solid blue;
 }
 
 h2, h3 {
 	color: white;
+  border: 2px solid green;
 }
 
 p {
