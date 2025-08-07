@@ -174,7 +174,7 @@ main {
 }
 
 #home .summary {
-  padding: 0 var(--space-md) var(--space-md);
+  padding: 0 calc(var(--space-md) + 3px) var(--space-md);
 	color: #dddddd;
 }
 
