@@ -59,7 +59,7 @@ main {
 
 #home {
   height: 100vh;
-  height: -webkit-fill-available;
+  height: 100svh;
   border: 3px solid pink;
 }
 
@@ -156,7 +156,7 @@ main {
 	}
 }
 
-#home .bottom-panel {
+.bottom-panel {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
