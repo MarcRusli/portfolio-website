@@ -7,16 +7,17 @@
 }
 
 :root {
-	--space-unit: 1rem;
-	--space-xxs:  calc(0.25 * var(--space-unit));
-	--space-xs:   calc(0.5 * var(--space-unit));
-	--space-sm:   calc(0.75 * var(--space-unit));
-	--space-md:   calc(1.25 * var(--space-unit));
-	--space-lg:   calc(2 * var(--space-unit));
-	--space-xl:   calc(3.25 * var(--space-unit));
-	--space-xxl:  calc(5.25 * var(--space-unit));
+  --space-unit: 1rem;
+  --space-xxs: calc(0.25 * var(--space-unit));
+  --space-xs: calc(0.5 * var(--space-unit));
+  --space-sm: calc(0.75 * var(--space-unit));
+  --space-md: calc(1.25 * var(--space-unit));
+  --space-lg: calc(2 * var(--space-unit));
+  --space-xl: calc(3.25 * var(--space-unit));
+  --space-xxl: calc(5.25 * var(--space-unit));
 
   --nav-background: hsl(240deg, 50%, 18%);
+  --text-color: #dddddd;
 }
 
 html {
@@ -25,9 +26,11 @@ html {
 }
 
 body {
-	background: linear-gradient(
-    var(--nav-background) 0rem 5rem, 
-    hsl(300deg, 50%, 20%) 100vh);
+  background: linear-gradient(
+    var(--nav-background) 0rem 5rem,
+    hsl(300deg, 50%, 20%) 100svh,
+    var(--nav-background) 100svh
+  );
 }
 
 header {
@@ -63,24 +66,26 @@ main {
 }
 
 .moon {
-	width: 10rem;
-	height: 10rem;
-	border-radius: 50%;
-	box-shadow: 1.2rem 1.2rem 0 0 hsl(30deg, 20%, 90%);
-	position: absolute;
-	top: 120px;
-	right: 80px;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  box-shadow: 1.2rem 1.2rem 0 0 hsl(30deg, 20%, 90%);
+  position: absolute;
+  top: 120px;
+  right: 80px;
 }
 
 #cloud {
-	width: 350px; height: 120px;
+  width: 350px;
+  height: 120px;
   background: #f2f9fe;
   border-radius: 100px;
   position: absolute;
-	z-index: 5;
+  z-index: 5;
 }
 
-#cloud:after, #cloud:before {
+#cloud:after,
+#cloud:before {
   content: "";
   position: absolute;
   background: #f2f9fe;
@@ -106,13 +111,13 @@ main {
 .clouds {
   width: 100%;
   height: 70vh;
-	overflow: hidden;
+  overflow: hidden;
 }
 
 .cloud.top {
-	position: relative;
-	top: 100px;
-	left: -340px;
+  position: relative;
+  top: 100px;
+  left: -340px;
   height: 150px;
   aspect-ratio: 1.8;
   --g: radial-gradient(50% 50%, #000 98%, #0000) no-repeat;
@@ -120,13 +125,13 @@ main {
     var(--g) 0 100%/36% 68%, var(--g) 27% 18%/26% 40%,
     linear-gradient(#000 0 0) bottom/67% 58% no-repeat;
   background: #ccccee;
-	animation: cloud-top 14s ease-in 0s infinite;
+  animation: cloud-top 14s ease-in 0s infinite;
 }
 
 .cloud.bottom {
-	position: relative;
-	top: 140px;
-	right: -100vw;
+  position: relative;
+  top: 140px;
+  right: -100vw;
   height: 180px;
   aspect-ratio: 1.8;
   --g: radial-gradient(50% 50%, #000 98%, #0000) no-repeat;
@@ -134,25 +139,25 @@ main {
     var(--g) 0 100%/36% 68%, var(--g) 27% 18%/26% 40%,
     linear-gradient(#000 0 0) bottom/67% 58% no-repeat;
   background: #ddddff;
-	animation: cloud-bottom 18s ease-in 4s infinite;
+  animation: cloud-bottom 18s ease-in 4s infinite;
 }
 
 @keyframes cloud-top {
-	0% {
-		transform: translateX(0);
-	}
-	100% {
-		transform: translateX(calc(100vw + 400px));
-	}
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(100vw + 400px));
+  }
 }
 
 @keyframes cloud-bottom {
-	0% {
-		transform: translateX(0);
-	}
-	100% {
-		transform: translateX(calc(-400px - 100vw));
-	}
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-400px - 100vw));
+  }
 }
 
 .bottom-panel {
@@ -175,7 +180,7 @@ main {
 
 #home .summary {
   padding: 0 calc(var(--space-md) + 3px) var(--space-md);
-	color: #dddddd;
+  color: #dddddd;
 }
 
 .divider {
@@ -191,28 +196,25 @@ main {
   );
 }
 
-section:not(#home) {
-	padding: var(--space-md);
+.section-container {
+  background-color: hsl(300deg, 40%, 25%);
+  margin: var(--space-md);
+  padding: var(--space-md);
+  border-radius: 16px;
 }
 
-#work {
-  background-color: hsl(300deg, 50%, 20%);
-  color: #eeeeee;
-  border: 2px solid red;
+h2,
+h3 {
+  color: white;
 }
 
-#other-pursuits {
-	background-color: hsl(300deg, 50%, 20%);
-  border: 2px solid blue;
-}
-
-h2, h3 {
-	color: white;
-  border: 2px solid green;
+h2 {
+  text-align: center;
+  margin-bottom: var(--space-md);
 }
 
 p {
-	color: #dddddd;
+  color: var(--text-color);
 }
 
 @media screen and (min-width: 992px) {
@@ -224,4 +226,27 @@ p {
   #home .summary {
     text-align: center;
   }
+
+  .cloud.top {
+    animation: cloud-top 28s ease-in 0s infinite;
+  }
+
+  .cloud.bottom {
+    animation: cloud-bottom 36s ease-in 4s infinite;
+  }
+}
+
+footer {
+  text-align: center;
+  margin: var(--space-md);
+}
+
+address p {
+  font-style: normal;
+}
+
+a {
+  text-decoration: none;
+  font-style: normal;
+  color: var(--text-color);
 }
