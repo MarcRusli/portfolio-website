@@ -250,3 +250,26 @@ a {
   font-style: normal;
   color: var(--text-color);
 }
+
+address {
+  display: flex;
+  justify-content: center;
+}
+
+address li {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--space-sm);
+}
+
+.contact i {
+  display: inline-block;
+  width: 2em;
+  margin-right: var(--space-md);
+}
+
+.contact-text {
+  color: var(--text-color);
+  line-height: 1.5;
+  font-style: normal;
+}
