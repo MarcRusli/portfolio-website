@@ -215,6 +215,7 @@ main {
   background-color: #ddddff;
   padding: var(--space-xs);
   border-radius: 4px;
+  font-weight: 500;
 }
 
 #other-pursuits p {
