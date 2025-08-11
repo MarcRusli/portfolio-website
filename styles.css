@@ -203,6 +203,34 @@ main {
   border-radius: 16px;
 }
 
+.hobby-title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#other-pursuits a {
+  border: none;
+  color: var(--nav-background);
+  background-color: #ddddff;
+  padding: var(--space-xs);
+  border-radius: 4px;
+}
+
+#other-pursuits p {
+  padding-top: var(--space-xs);
+}
+
+#other-pursuits p:not(:last-of-type) {
+  padding-bottom: var(--space-sm);
+}
+
+hr {
+  color: var(--nav-background);
+  width: 80%;
+  margin: 0 auto var(--space-sm);
+}
+
 h2,
 h3 {
   color: white;
@@ -211,6 +239,11 @@ h3 {
 
 h2 {
   margin-bottom: var(--space-md);
+  font-size: 1.7em;
+}
+
+h3 {
+  font-size: 1.4em;
 }
 
 p {
