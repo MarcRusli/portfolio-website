@@ -229,6 +229,7 @@ hr {
   color: var(--nav-background);
   width: 80%;
   margin: 0 auto var(--space-sm);
+  border: 1px solid var(--nav-background);
 }
 
 h2,
