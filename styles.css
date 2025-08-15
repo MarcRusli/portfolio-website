@@ -208,6 +208,25 @@ main {
   border-radius: 16px;
 }
 
+.gallery {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-sm)
+}
+
+.gallery:has(:only-child) {
+  justify-content: center;
+}
+
+.gallery-item {
+  width: 200px;
+  height: 100px;
+  border: var(--space-xs) solid #ccccee;
+  border-radius: 4px;
+}
+
 .hobby-title-container {
   display: flex;
   justify-content: space-between;
