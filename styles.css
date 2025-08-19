@@ -221,7 +221,7 @@ main {
 }
 
 .gallery-item {
-  width: 370px;
+  width: 310px;
   height: 200px;
   border: var(--space-xs) solid #ccccee;
   border-radius: 4px;
