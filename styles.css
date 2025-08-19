@@ -211,9 +211,9 @@ main {
 .gallery {
   display: flex;
   width: 100%;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
-  gap: var(--space-sm)
+  gap: var(--space-sm);
 }
 
 .gallery:has(:only-child) {
@@ -221,8 +221,8 @@ main {
 }
 
 .gallery-item {
-  width: 200px;
-  height: 100px;
+  width: 370px;
+  height: 200px;
   border: var(--space-xs) solid #ccccee;
   border-radius: 4px;
 }
