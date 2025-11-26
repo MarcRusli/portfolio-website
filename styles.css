@@ -239,6 +239,7 @@ main {
     0 0 20px 6px rgba(99, 102, 241, 0.18), 0 0 46px 14px rgba(99, 102, 241, 0.1);
   filter: drop-shadow(0 10px 14px rgba(99, 102, 241, 0.12));
   transform: translateZ(0); /* creates composite layer */
+  cursor: pointer;
 }
 
 .gallery-item:hover {
