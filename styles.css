@@ -223,7 +223,7 @@ main {
 
 .gallery-item {
   width: 300px;
-  height: 300px;
+  height: auto;
   border: var(--space-sm) solid #ccccee;
   background-color: #ccccee;
   border-radius: var(--space-xs);
@@ -270,24 +270,6 @@ main {
   }
   100% {
     transform: rotate(0deg);
-  }
-}
-
-@keyframes bounce {
-  0% {
-    transform: translateY(0);
-  }
-  30% {
-    transform: translateY(-6px);
-  }
-  55% {
-    transform: translateY(-2px);
-  }
-  75% {
-    transform: translateY(-4px);
-  }
-  100% {
-    transform: translateY(0);
   }
 }
 
